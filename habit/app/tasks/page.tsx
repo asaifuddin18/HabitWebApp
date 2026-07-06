@@ -72,8 +72,8 @@ export default function ManageTasks() {
               key={task.taskId}
               className="flex items-center justify-between rounded-xl border border-black/10 px-4 py-3 dark:border-white/10"
             >
-              <div className="min-w-0">
-                <p className="truncate font-medium">
+              <Link href={`/tasks/${task.taskId}`} className="min-w-0 group">
+                <p className="truncate font-medium group-hover:underline">
                   {task.title}
                   {!task.active && (
                     <span className="ml-2 rounded bg-black/10 px-1.5 py-0.5 text-xs dark:bg-white/10">
@@ -84,7 +84,7 @@ export default function ManageTasks() {
                 <p className="text-sm text-black/50 dark:text-white/50">
                   {describeSchedule(task)}
                 </p>
-              </div>
+              </Link>
               <div className="flex flex-none gap-2 text-sm">
                 <Link
                   href={`/tasks/${task.taskId}/edit`}
@@ -99,10 +99,4 @@ export default function ManageTasks() {
                   Delete
                 </button>
               </div>
-            </li>
-          ))}
-        </ul>
-      )}
-    </div>
-  );
-}
+            

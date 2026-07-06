@@ -14,9 +14,14 @@ export default function NavBar() {
             Habit
           </Link>
           {session && (
-            <Link href="/tasks" className="text-sm text-black/60 hover:text-black dark:text-white/60 dark:hover:text-white">
-              Manage tasks
-            </Link>
+            <>
+              <Link href="/dashboard" className="text-sm text-black/60 hover:text-black dark:text-white/60 dark:hover:text-white">
+                Dashboard
+              </Link>
+              <Link href="/tasks" className="text-sm text-black/60 hover:text-black dark:text-white/60 dark:hover:text-white">
+                Tasks
+              </Link>
+            </>
           )}
         </div>
         <div className="text-sm">
@@ -30,13 +35,4 @@ export default function NavBar() {
           ) : (
             <button
               onClick={() => signIn("google")}
-              className="rounded-md bg-black px-3 py-1 text-white dark:bg-white dark:text-black"
-            >
-              Sign in
-            </button>
-          )}
-        </div>
-      </nav>
-    </header>
-  );
-}
+        
