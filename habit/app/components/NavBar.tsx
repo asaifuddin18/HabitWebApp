@@ -35,4 +35,13 @@ export default function NavBar() {
           ) : (
             <button
               onClick={() => signIn("google")}
-        
+              className="rounded-md bg-black px-3 py-1 text-white dark:bg-white dark:text-black"
+            >
+              Sign in
+            </button>
+          )}
+        </div>
+      </nav>
+    </header>
+  );
+}

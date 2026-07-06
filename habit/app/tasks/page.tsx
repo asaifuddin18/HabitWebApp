@@ -99,4 +99,10 @@ export default function ManageTasks() {
                   Delete
                 </button>
               </div>
-            
+            </li>
+          ))}
+        </ul>
+      )}
+    </div>
+  );
+}
